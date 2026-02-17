@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Picture Perfect Portfolios (Articles, EN)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "source",
+    "lang",
+    "title",
+    "text",
+    "domain",
+    "content_hash"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "content_hash": {
+      "type": "string"
+    }
+  }
+}
