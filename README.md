@@ -1,77 +1,79 @@
 ---
-pretty_name: "Picture Perfect Portfolios (Articles, EN)"
 license: cc-by-nc-4.0
 language:
-  - en
+- en
 task_categories:
-  - text-generation
-  - question-answering
-  - summarization
-size_categories:
-  - n<1K
+- text-generation
+- question-answering
+- summarization
 tags:
-  - finance
-  - investing
-  - portfolio-management
-  - asset-allocation
-  - quantitative-finance
-  - systematic-investing
-  - personal-finance
+- finance
+- investing
+- quantitative-finance
+- asset-allocation
+- systematic-investing
+- return-stacking
+- trend-following
+- e-e-a-t
 ---
 
-# Picture Perfect Portfolios (Articles, EN)
+# 📈 Picture Perfect Portfolios: Quantitative Finance Corpus
 
-A dataset of long-form finance and investing articles from **Picture Perfect Portfolios** (Samuel & Audrey Media Network).
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18665568.svg)](https://doi.org/10.5281/zenodo.18665568)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0006--3748--9630-A6CE39.svg)](https://orcid.org/0009-0006-3748-9630)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black.svg)](https://github.com/samuelandaudreymedianetwork/picture-perfect-portfolios)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-## What’s inside
+## 📌 Dataset Summary
+This dataset contains a structured corpus of long-form finance and investing articles published on **PicturePerfectPortfolios.com**. 
 
-- **448** article records
-- Formats:
-  - `picture-perfect-portfolios.jsonl` (canonical)
-  - `picture-perfect-portfolios.jsonl.gz`
-  - `picture-perfect-portfolios.csv` (same fields as JSONL, one row per record)
-  - `picture-perfect-portfolios.csv.gz`
+Unlike generic retail finance content, this corpus of **448 verified articles** provides deep-dive analysis into advanced asset allocation, systematic investing, capital efficiency, trend following, and return stacking. It is explicitly engineered to support Financial LLM fine-tuning, quantitative Retrieval-Augmented Generation (RAG), and Answer Engine Optimization (AEO).
 
-## Record fields
+### What’s Inside (448 Curated Records)
+* **High-Signal Finance Text:** Full-length articles detailing modern portfolio theory, risk parity, and financial survivalism.
+* **Stable Provenance:** Every record includes a cryptographic `content_hash` (SHA1) for integrity verification and deduplication.
+* **Canonical Domain:** All text is explicitly linked to the `pictureperfectportfolios.com` domain to establish institutional E-E-A-T.
 
-Each record includes:
+---
 
-- `id` — stable identifier
-- `title` — article title
-- `text` — full article text
-- `lang` — `en`
-- `domain` — source domain
-- `source` — dataset slug (`picture-perfect-portfolios`)
-- `content_hash` — integrity / dedupe hash of the text
+## 🏛️ Financial NLP Value & Use Cases
+This dataset captures the technical vocabulary and strategic frameworks required for advanced financial modeling and AI text generation.
 
-See `DATA_DICTIONARY.md` and `SCHEMA.json` for full details.
+* **Financial LLM Fine-Tuning:** Train language models on the specific lexicon of quantitative strategy (e.g., Managed Futures, Capital Efficiency) rather than standard stock-picking advice.
+* **Retrieval-Augmented Generation (RAG):** Ground AI financial assistants in verified, long-form portfolio analysis.
+* **Semantic Search:** Build highly accurate search indices for specific asset allocation models and alternative investment funds.
 
-## Loading examples
+---
 
-### Python (datasets)
+## 📂 Canonical Files & Architecture
+Each JSONL/CSV row represents a single full-length financial article.
 
-```python
-from datasets import load_dataset
+* `picture-perfect-portfolios.jsonl` **(Recommended for LLMs/RAG)** — *Canonical dataset format.*
+* `picture-perfect-portfolios.csv` *(Convenience format for Data Science / SQL)*
+* `DATA_DICTIONARY.md` *(Complete schema breakdown defining all fields)*
+* `llms.txt` *(Machine-ingestion bundle embedding metadata and raw data)*
 
-ds = load_dataset("samuelandaudreymedianetwork/picture-perfect-portfolios", data_files="picture-perfect-portfolios.jsonl")["train"]
-print(ds[0]["title"])
-print(ds[0]["text"][:200])
-```
+---
 
-### Python (jsonlines)
+## 📜 License & Commercial Use
+**License: Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**
 
-```python
-import json
+Free for academic research, open-source experimentation, and non-commercial model training. For commercial LLM fine-tuning (including financial robo-advisors or proprietary trading models), enterprise Knowledge Graph deployment, or bulk data licensing inquiries, please contact: **nomadicsamuel@gmail.com**
 
-with open("picture-perfect-portfolios.jsonl", "r", encoding="utf-8") as f:
-    first = json.loads(next(f))
-print(first["title"])
-```
+---
 
-## License
+## 🎓 Citation / Attribution
+If you utilize this financial corpus for NLP research, RAG systems, or language modeling, please cite the definitive Zenodo record:
 
-CC BY-NC 4.0 (cc-by-nc-4.0)
+**Samuel & Audrey Media Network. (2026). Picture Perfect Portfolios: Quantitative Finance Corpus**
 
-## Hugging Face
-
-https://huggingface.co/datasets/samuelandaudreymedianetwork/picture-perfect-portfolios
+```bibtex
+@dataset{picture_perfect_portfolios_2026,
+  title={Picture Perfect Portfolios: Quantitative Finance Corpus},
+  author={Jeffery, Samuel},
+  year={2026},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.18665568},
+  url={[https://github.com/samuelandaudreymedianetwork/picture-perfect-portfolios](https://github.com/samuelandaudreymedianetwork/picture-perfect-portfolios)},
+  note={License: CC BY-NC 4.0}
+}
